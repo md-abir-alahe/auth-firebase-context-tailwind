@@ -19,9 +19,12 @@ const Header = () => {
     return (
         <div className="navbar flex justify-center bg-blue-200">
             <Link className="btn btn-ghost normal-case text-xl" to={`/`}>Home</Link>
+            <Link className="btn btn-ghost normal-case text-xl" to={`/orders`}>Orders</Link>
+            
 
             {
                 user ? <>
+                    <Link className="btn btn-ghost normal-case text-xl" to={`/profile`}>Profile</Link>
                     <span>{user.email}</span>
                     <button onClick={handleLogOut} className='btn btn-primary'>sign out</button>
                 </> : <>
